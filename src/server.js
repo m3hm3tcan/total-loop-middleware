@@ -29,7 +29,7 @@ app.get("/health", (req, res) => {
  */
 const pingCore = async () => {
   try {
-    await axios.get(`https://total-loop-server.onrender.com/health`);
+    await axios.get(`${process.env.LICENSE_SERVER_URL}/health`);
     console.log("[KEEP-ALIVE] Core is alive");
   } catch (err) {
     console.log("[KEEP-ALIVE] Core ping failed");
